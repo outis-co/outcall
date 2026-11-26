@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outcall — Let your AI call you</title>
+<meta name="description" content="Outcall is a done-for-you connector service for personal AI stacks. Your AI stops waiting in a chat tab and calls you instead — check-ins, follow-ups, reminders — and writes everything down.">
+<style>
+  :root {
+    --bg: #0b0d10;
+    --surface: #13161b;
+    --border: #23272f;
+    --text: #eef1f4;
+    --muted: #9aa4ae;
+    --accent: #4ade80;
+    --accent-dim: #1d2b21;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 28px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-weight: 700; font-size: 20px; letter-spacing: -0.02em; }
+  .logo span { color: var(--accent); }
+  .byline { color: var(--muted); font-size: 13px; }
+  .hero { padding: 96px 0 64px; text-align: center; }
+  .kicker {
+    display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent);
+    background: var(--accent-dim); border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 28px;
+  }
+  h1 { font-size: clamp(42px, 7vw, 68px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; }
+  h1 .accent { color: var(--accent); }
+  .sub { margin: 24px auto 0; max-width: 620px; font-size: 19px; color: var(--muted); }
+  .cta-row { margin-top: 40px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 28px; border-radius: 10px;
+    font-size: 16px; font-weight: 600; text-decoration: none;
+  }
+  .btn-primary { background: var(--accent); color: #0b0d10; }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+  .note { margin-top: 16px; font-size: 14px; color: var(--muted); }
+  section { padding: 56px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .section-sub { color: var(--muted); max-width: 640px; margin-bottom: 36px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+  .card h3 { font-size: 17px; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 15px; }
+  .step-num { font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 10px; }
+  .call-flow {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 28px; font-size: 16px;
+  }
+  .call-flow .who { color: var(--accent); font-weight: 600; }
+  .call-flow p + p { margin-top: 10px; }
+  .call-flow .dim { color: var(--muted); font-size: 14px; margin-top: 18px; }
+  ul.ticks { list-style: none; }
+  ul.ticks li { padding: 8px 0 8px 28px; position: relative; color: var(--muted); }
+  ul.ticks li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  ul.ticks li strong { color: var(--text); }
+  footer { padding: 48px 0 64px; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">Outcall<span>.</span></div>
+    <div class="byline">by Outis Company</div>
+  </header>
+
+  <div class="hero">
+    <div class="kicker">A connector service for personal AI stacks</div>
+    <h1>Let Muse <span class="accent">call you.</span></h1>
+    <p class="sub">Your AI shouldn't wait in a chat tab for you to remember it exists.
+    Outcall gives your personal AI a phone number and a voice — it calls you for the check-ins,
+    follow-ups, and reminders that matter, hears your answer, and writes it down.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:alvin@outis.company?subject=Outcall%20setup">Book a setup</a>
+      <a class="btn btn-ghost" href="#how">How it works</a>
+    </div>
+    <p class="note">Done-for-you setup. Your number, your AI, your data.</p>
+  </div>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <p class="section-sub">We wire a voice-calling connector into the AI stack you already use. No new app to learn — the phone call is the interface.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="step-num">STEP 1</div>
+        <h3>We set up your line</h3>
+        <p>A dedicated number and a voice agent, configured with your check-in scripts, your schedule, and your words for things.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">STEP 2</div>
+        <h3>Your AI calls you</h3>
+        <p>Chat message went unanswered? The call is the escalation. It rings at the time you chose and asks the questions you defined.</p>
+      </div>
+      <div class="card">
+        <div class="step-num">STEP 3</div>
+        <h3>You just answer</h3>
+        <p>Speak naturally — a sentence is a complete answer. The transcript lands back in your AI's hands and your trackers update themselves.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What a call sounds like</h2>
+    <p class="section-sub">Twenty seconds, on your way home. That's the whole interaction.</p>
+    <div class="call-flow">
+      <p><span class="who">Your AI:</span> "Evening check-in. How did today land — workout done? And the two numbers you track?"</p>
+      <p><span class="who">You:</span> "Workout done. First one zero, second one — yeah, failed today."</p>
+      <p><span class="who">Your AI:</span> "Logged. Talk tomorrow."</p>
+      <p class="dim">No app to open. No form to fill. The record is written before you've parked the car.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Built for</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Habit &amp; health accountability</h3>
+        <p>Daily check-ins you'll actually answer, because a ringing phone is harder to ignore than a notification.</p>
+      </div>
+      <div class="card">
+        <h3>End-of-day reviews</h3>
+        <p>Your AI interviews you for two minutes and turns it into tomorrow's plan.</p>
+      </div>
+      <div class="card">
+        <h3>Follow-ups that slip</h3>
+        <p>Medication, standups, client nudges, "did you send that thing" — asked out loud, answered out loud, logged.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What you get</h2>
+    <ul class="ticks">
+      <li><strong>Your own number</strong> — save it as your AI's contact; calls come from a name you know</li>
+      <li><strong>Your scripts</strong> — the exact questions, in the exact words and codes you already use</li>
+      <li><strong>Your stack</strong> — answers flow back into your AI's memory, trackers, and notes</li>
+      <li><strong>Escalation logic</strong> — chat first, call only when it matters or goes unanswered</li>
+      <li><strong>Costs in cents</strong> — a check-in call runs about 20 seconds; most people spend under $2/month on calls</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Get it set up</h2>
+    <p class="section-sub">Outcall is a done-for-you service: one setup session to connect your number, voice agent, and scripts — then a small monthly that covers your line and call minutes. Tell us what your AI should call you about.</p>
+    <div class="cta-row" style="justify-content: flex-start;">
+      <a class="btn btn-primary" href="mailto:alvin@outis.company?subject=Outcall%20setup">Book a setup</a>
+    </div>
+  </section>
+
+  <footer>
+    Outcall — a service of <a href="https://outis.company">Outis Company</a>. Product over ego.
+  </footer>
+
+</div>
+</body>
+</html>
